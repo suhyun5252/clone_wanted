@@ -25,6 +25,7 @@ html {
 button{
     background: #fff;
     border: none;
+    cursor: pointer;
 }
 
 body {

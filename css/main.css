@@ -66,9 +66,6 @@
 .qk-icon{
     width: 56px;
     height: 56px;
-    border: 1px solid yellowgreen;
-
-    
 }
 .qk-icon img{
     width: 100%;
@@ -94,7 +91,7 @@
 
 
 
-/* ----- 메인컨텐츠 1  ----- */
+/* ----- 메인컨텐츠 1 , 메인컨텐츠 5 -col5 ----- */
 /* 메인컨텐츠 1 - 상단 */
 .mcont-top{
     /* border: 1px solid red; */
@@ -133,9 +130,7 @@
 }
 
 /* 메인컨텐츠 1 - 리스트 */
-.list-wrap{
-    overflow: hidden;
-}
+.list-style-col5 .list-wrap{overflow: hidden;}
 .attention-all-jobs{}
 .list-style-col5{
     display: flex;
@@ -143,7 +138,10 @@
 }
 
 .job-card{}
-.job-card a{}
+.job-card a{
+
+}
+
 
 .list-style-col5 .job-card .thum{
     position: relative;
@@ -157,10 +155,17 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all .3s;
+}
+.list-style-col5 .job-card:hover img{
+    transform: scale(1.05);
 }
 .list-style-col5  .job-card .thum::before{
     display: block;
     position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
     width: 100%;
     height: 52px;
     background: linear-gradient(0deg, transparent, rgba(0, 0, 0, .35));
@@ -175,6 +180,7 @@
     height: 54px;
     padding: 0 15px;
     color: #fff;
+    z-index: 3;
     justify-content: space-between;
     align-items: center;
 }
@@ -205,19 +211,67 @@
 
 
 
-/* ----- 메인컨텐츠 2 ----- */
-
+/* ----- 메인컨텐츠 2  -col3 ----- */
 .now-attention-jobs{
-    border: 1px solid #000;
+    display: flex;
+    gap: 20px;
 }
-.list-style-col3{}
-.list-style-col3 a{}
-.list-style-col3 .thum{}
-.list-style-col3 .thum img{}
-.list-style-col3 .thum .card-txt{}
 
+.list-style-col3 a{
+    display: block;
+    position: relative;
+    width: 451px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: all .3s;
+}
 
+.list-style-col3:hover a{
+    transform: translateY(-10px);
+ }
+.list-style-col3 a::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 146px;
+    background: linear-gradient(180deg,transparent 0,rgb(97, 54, 213,1));
+    content: '';
+}
 
+.list-style-col3 a img{
+    width: 100%;
+    height: 100%;
+    transition: all .3s;
+}
+
+.list-style-col3 a:hover img{
+    transform: scale(1.02);
+}
+
+.list-style-col3 .card-txt{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 105px;
+    padding: 20px;
+    color: #fff;
+    z-index: 2;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list-style-col3 .card-txt h4{
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.list-style-col3 .card-txt span{
+    font-size: 15px;
+    text-shadow: 0 0 12px rgba(0, 0, 0, .22);
+}
 
 
 
@@ -225,5 +279,141 @@
 
 
 /* ----- 메인컨텐츠 3 ----- */
+.theme-jobs{
+    /* border: 1px solid #000; */
+    display: flex;
+    gap: 13px;
+}
+
+.list-style-col4{
+}
+
+.list-style-col4 a{
+    display: block;
+    border: 1px solid rgba(111, 112, 117,.16);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all .3s;
+}
+
+.list-style-col4 a:hover img{
+    transform: scale(1.02);
+}
+.list-style-col4 .thum .img-box{
+    width: 338px;
+    height: 172px;
+    overflow: hidden;
+}
+.list-style-col4 .thum .img-box img{
+    width: 100%;
+    height: 100%;
+
+}
+.list-style-col4 .thum .card-txt{
+    padding: 20px;
+}
+.list-style-col4 .thum .card-txt h4{
+    color: #171719;
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+.list-style-col4 .thum .card-txt span{
+    color: rgba(55, 56, 60, .61);
+    font-weight: 500;
+    font-size: 13px;
+}
 /* ----- 메인컨텐츠 4 ----- */
+.tit-area {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.station-btn{
+    border: 1px solid rgba(55,56,60,.16);
+    border-radius: 8px;
+    padding: 7px 10px 7px 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.station-btn:hover{
+    background: #f3f3f3;
+}
+.station-btn span{
+    color: #171719;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+.station-area-jobs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.list-style-col9{
+    width: 445px;
+}
+.list-style-col9 a{
+    display: block;
+}
+.list-style-col9 a:hover .img-box img{
+    transform: scale(1.05);
+}
+.list-style-col9 .thum{
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.list-style-col9 .thum .img-box{
+    width: 120px;
+    height: 90px;
+    border-radius: 12px;
+    overflow: hidden;
+
+}
+.list-style-col9 .thum .img-box img{
+    width: 100%;
+    height: 100%;
+    transition: all .2s;
+}
+.list-style-col9 .thum .txt-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+    width: calc(100% - 150px);
+}
+.list-style-col9 .thum .txt-area h4{
+    color: #171719;
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+.list-style-col9 .thum .txt-area p{}
+.list-style-col9 .thum .txt-area .company-name{}
+
+.list-style-col9 .thum .bookmark-area{
+    width: 24px;
+    height: 24px;
+}
+
+.list-style-col9 .thum .bookmark-area img{
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    /* color: #37383c47; */
+}
+
+.list-style-col9 a:hover .bookmark-area img{
+    visibility: visible;
+}
+
+
+
+
+
 /* ----- 메인컨텐츠 5 ----- */
