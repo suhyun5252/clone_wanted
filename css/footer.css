@@ -1,0 +1,143 @@
+.footer{
+    border-top: 1px solid rgba(0,0,0,.08);
+    padding: 40px 16px 0;
+    margin-top: 160px;
+}
+
+.footer .layout{
+}
+
+/* 상단  */
+.ft-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ft-top .left{
+
+}
+.ft-logo{
+    display: block;
+    width: 112px;
+    height: 32px;
+}
+.ft-logo img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.ft-top .right{
+}
+.brand-link{
+    display: flex;
+    gap: 32px;
+}
+.brand-link li{}
+.brand-link li a{
+    color: #171719;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+.brand-link li:last-child a{
+    font-weight: 700;
+}
+
+
+
+/* 센터 */
+.ft-txt{
+    /* border: 1px solid #000; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px 0;
+}
+.ft-txt > div{
+    display: flex; 
+}
+.ft-txt span{
+    padding: 0 10px;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    color: rgba(55, 56, 60, .61);
+    position: relative;
+}
+.ft-txt span:first-child{
+    padding-left: 0;
+}
+.ft-txt span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background-color:  rgba(111, 112, 117, .22);
+}
+.ft-txt span:last-child::before{
+    display: none;
+}
+
+.ask-link{
+    display: flex;
+    gap: 8px 24px;
+    margin-bottom: 30px;
+}
+.ask-link li{
+}
+.ask-link li a{
+    font-size: 13px;
+    font-weight: 600;
+    color: #1717199c;
+}
+
+
+/* 하단 */
+.ft-copy{
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.copy{
+    font-size: 13px;
+    color: rgba(55, 56, 60, .61);
+    font-weight: 500;
+}
+.sns{
+    display: flex;
+    gap: 5px;
+
+}
+
+.sns li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height:36px;
+}
+.sns li a:hover span{
+    opacity: .05;
+}
+.sns li a img{
+
+}
+.sns li a span{
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50% , -50%);
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    opacity: 0;
+    background-color: rgba(55, 56, 60, .61);
+    transition: opacity .2s;
+}

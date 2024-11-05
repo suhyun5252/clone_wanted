@@ -41,3 +41,23 @@ body {
     max-width: 1400px;
     margin: 0 auto;
 }
+
+
+.talk-btn-area{
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 64px;
+  height: 64px;
+}
+.talk-btn{
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background: #050505;
+}
+
+.talk-btn img{
+  width: 60%;
+  height: 60%;
+}

@@ -53,16 +53,21 @@
 
 .quick-menu{
     display: flex;
-    gap: 50px;
 }
 .quick-menu li{}
 .quick-menu li a{
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 5px;
+    justify-content: space-around;
+    min-width: 116px;
+    min-height: 94px;
+    border-radius: 10px;
+    transition: all .3s;
 }
-
+.quick-menu li a:hover{
+    background: #1717190c;
+}
 .qk-icon{
     width: 56px;
     height: 56px;
@@ -190,7 +195,7 @@
 }
 .list-style-col5 .job-card .thum i {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .list-style-col5 .job-card .job{
@@ -405,6 +410,7 @@
     width: 100%;
     height: 100%;
     visibility: hidden;
+    opacity: .2;
     /* color: #37383c47; */
 }
 
