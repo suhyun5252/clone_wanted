@@ -1,6 +1,6 @@
 .footer{
     border-top: 1px solid rgba(0,0,0,.08);
-    padding: 40px 16px 0;
+    padding: 40px 0 16px;
     margin-top: 160px;
 }
 
@@ -52,12 +52,12 @@
     /* border: 1px solid #000; */
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 30px 0;
+    gap: 12px;
+    padding: 34px 0;
 }
-.ft-txt > div{
+/* .ft-txt > div{
     display: flex; 
-}
+} */
 .ft-txt span{
     padding: 0 10px;
     font-size: 13px;
@@ -65,6 +65,8 @@
     font-weight: 500;
     color: rgba(55, 56, 60, .61);
     position: relative;
+    word-wrap: break-word;
+    word-break: keep-all;
 }
 .ft-txt span:first-child{
     padding-left: 0;
@@ -102,7 +104,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 18px 0 0;
 }
 .copy{
     font-size: 13px;
@@ -111,7 +113,7 @@
 }
 .sns{
     display: flex;
-    gap: 5px;
+    
 
 }
 

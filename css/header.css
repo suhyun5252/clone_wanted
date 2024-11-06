@@ -6,6 +6,7 @@
     width: 100%;
     height: 61px;
     background: rgba(255, 255, 255, .88);
+    backdrop-filter: saturate(150%) blur(32px);
     border-bottom: 1px solid #eee;
     z-index: 99;
 }
@@ -20,16 +21,16 @@
     /* border: 1px solid pink; */
     display: flex;
     align-items: center;
-    gap: 40px;
 }
 /* 로고 */
 .header .logo{
-    width: 112px;
+    max-width: 170px;
+    min-width: 152px;
     height: 32px;
 
 }
 .header .logo a{
-    width: 100%;
+    
     height: 100%;
 }
 /* 네비 */
@@ -49,12 +50,14 @@
 .header .gnb-list:hover 
 .header .gnb-list li{
     height: 100%;
+    
 }
 .header .gnb-list li a{
     display: flex;
     height: 100%;
-    padding: 0 15px;
+    padding: 0 2px;
     align-items: center;
+    margin-right: 20px;
 }
 .header .gnb-list li svg{
     margin-right: 5px;
@@ -70,25 +73,29 @@
     display: flex;
     height: 100%;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
 }
 
-.search-btn{
+.btn-area li button{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 40px;
     height: 40px;
+    
     align-items: center;
     position: relative;
     
 }
-.search-btn img{ 
+.search-btn{
+    margin-right: 3px;
+}
+.btn-area li button img{ 
     width: 24px;
     height: 24px;
     opacity: .8;
 }
-.search-btn span{ 
+.btn-area li button span{ 
     display: block;
     border-radius: 100%;
     position: absolute;
@@ -98,7 +105,7 @@
     background: rgba(55,56,60,.16);
     transition: opacity .3s;
 }
-.search-btn:hover span{
+.btn-area li button:hover span{
     opacity: .2;
 }
 .header .btn-area a{
@@ -115,6 +122,21 @@
     background: rgba(55,56,60,.05);
 }
 
-.header .btn-area .signin{
+.header .btn-area .signin a{
     color: #0066ff;
+
+}
+.signin b{
+    font-weight: 600;
+}
+.mb-menu-btn{
+    display: none;
+}
+
+
+@media screen and (max-width : 992px) {
+    .signin b{display: none;}
+    .interaction{display: none;}
+    .mb-menu-btn{display: block;}
+    
 }
