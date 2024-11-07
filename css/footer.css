@@ -38,7 +38,6 @@
     color: #171719;
     font-size: 16px;
     font-weight: 600;
-
 }
 
 .brand-link li:last-child a{
@@ -59,7 +58,7 @@
     display: flex; 
 } */
 .ft-txt span{
-    padding: 0 10px;
+    /* padding: 0 10px; */
     font-size: 13px;
     font-style: normal;
     font-weight: 500;
@@ -67,20 +66,16 @@
     position: relative;
     word-wrap: break-word;
     word-break: keep-all;
+    line-height: 1.2em;
 }
-.ft-txt span:first-child{
-    padding-left: 0;
+
+.ft-txt span::after{
+    content: '|';
+    margin: 0 8px;
+    color: hsla(225, 5%, 46%, .22);
 }
-.ft-txt span::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background-color:  rgba(111, 112, 117, .22);
-}
-.ft-txt span:last-child::before{
+
+.ft-txt span:last-child::after{
     display: none;
 }
 
@@ -113,8 +108,6 @@
 }
 .sns{
     display: flex;
-    
-
 }
 
 .sns li a{
@@ -142,4 +135,67 @@
     opacity: 0;
     background-color: rgba(55, 56, 60, .61);
     transition: opacity .2s;
+}
+
+@media screen and (max-width: 768px) {
+    .footer{
+        padding: 36px 0 70px;
+    }
+    .ft-top{
+        flex-direction: column;
+        gap: 30px;
+        align-items: start;
+    }
+    .ft-logo{
+        width: 98px;
+        height: 28px;
+    }
+
+    .brand-link{
+        flex-wrap: wrap;
+        gap: 8px 24px;
+        margin-bottom: 24px;
+    }
+    .brand-link li:nth-child(1){ order: 1;}
+    .brand-link li:nth-child(2){ order: 2;}
+    .brand-link li:nth-child(3){ order: 5;}
+    .brand-link li:nth-child(4){ order: 6;}
+    .brand-link li:nth-child(5){ order: 3;}
+    .privacy-policy{
+        order: 4;
+    }
+    .brand-link li a{
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .ft-txt {
+        display: inline;
+        line-height: 1.5em;
+    }
+    .ft-txt > div{
+        display: inline;
+    }
+    .ft-txt span{
+        /* display: block; */
+        word-break: break-all;
+        font-size: 12px;
+    }
+
+    .ask-link {
+        margin: 20px 0 34px;
+        flex-wrap: wrap;
+    }
+    .ask-link li a{ font-size: 12px;}
+
+    .ft-copy{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        padding: 30px 0 0;
+        gap: 8px 24px;
+    }
+
+    .sns{
+        margin-left: -10px;
+    }
 }

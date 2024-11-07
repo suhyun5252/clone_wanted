@@ -76,3 +76,17 @@ body {
   }
   
 }
+
+@media screen and (max-width: 768px) {
+  .layout{
+    width: 100%;
+    padding: 0 20px;
+}
+
+.talk-btn-area{
+  width: 52px;
+  height: 52px;
+  right: 16px;
+  bottom: 70px;
+}
+}

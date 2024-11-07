@@ -18,19 +18,17 @@
 
 /* -----왼쪽 ----- */
 .header .left{
-    /* border: 1px solid pink; */
     display: flex;
     align-items: center;
 }
 /* 로고 */
 .header .logo{
     max-width: 170px;
-    min-width: 152px;
+    min-width: 165px;
     height: 32px;
 
 }
 .header .logo a{
-    
     height: 100%;
 }
 /* 네비 */
@@ -50,14 +48,13 @@
 .header .gnb-list:hover 
 .header .gnb-list li{
     height: 100%;
-    
 }
+
 .header .gnb-list li a{
     display: flex;
     height: 100%;
     padding: 0 2px;
     align-items: center;
-    margin-right: 20px;
 }
 .header .gnb-list li svg{
     margin-right: 5px;
@@ -135,8 +132,17 @@
 
 
 @media screen and (max-width : 992px) {
+    .header {
+        border-bottom-color: transparent;
+        height: 56px;
+    }
+    .header .gnb{display: none;}
+    .signin{order: -1;}
     .signin b{display: none;}
     .interaction{display: none;}
     .mb-menu-btn{display: block;}
-    
+}
+
+@media screen and (max-width : 768px) {
+
 }

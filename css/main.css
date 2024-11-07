@@ -22,6 +22,12 @@
     align-items: center;
     gap: 13px;
     border-radius: 16px;
+    animation: scale-up .7s ease-out both;
+}
+
+@keyframes scale-up{
+    0%{transform: scale(0);opacity: 0;}
+    100%{transform: scale(1);opacity: 1;}
 }
 .bn-bar img{
     width: 34px;
@@ -479,7 +485,25 @@
         justify-content: space-between;
     }
     
-    .quick-menu li a{
+    .quick-menu li a{}
 
+}
+
+@media screen and (max-width : 768px){
+    .bn-bar{
+        width: 100%;
+        height: auto;
+        min-height: 76px;
     }
+    .bn-bar span{
+        white-space: pre;
+        line-height: 1.25em;
+        font-size: 14px;
+        flex: 1 1;
+    }
+    .banner-area{
+        padding: 10px 0px;
+    }
+    .bn-bar img{width: 38px;}
+    .bn-bar i{font-size: 12px;}
 }
